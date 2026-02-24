@@ -1,0 +1,94 @@
+@import url("font.css");
+
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+
+	font-feature-settings: 'tnum' 1, 'cv08' 1;
+}
+
+:root {
+	color-scheme: dark;
+
+	--background-color: black;
+	--foreground-color: white;
+	--foreground-muted: hsl(0deg 0% 60%);
+
+	--font-family--body: "Inter Complete", system-ui;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+
+	background-color: var(--background-color);
+
+	font-family: var(--font-family--body);
+}
+
+.timetable {
+	display: flex;
+	gap: 1em;
+	flex-direction: column;
+	flex: 1 1 auto;
+	justify-content: center;
+
+	padding: 4em;
+}
+
+.timerow {
+	font-size: 2em;
+	display: flex;
+	gap: .25em;
+	align-items: baseline;
+}
+
+.timerow.now {
+	font-size: 4em;
+	font-weight: 700;
+}
+
+.timerow .start {
+	color: var(--foreground-muted);
+	font-size: 80%;
+}
+
+.time {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	flex: 1 1 auto;
+
+	padding: 4em;
+}
+
+.date {
+	font-size: 2em;
+}
+
+.clock {
+	font-size: 10em;
+	font-weight: 700;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: end;
+	flex: 1 1 auto;
+}
+
+.second {
+	font-size: 50%;
+}
+
+.alert {
+	font-size: 5em;
+	color: yellow;
+}
